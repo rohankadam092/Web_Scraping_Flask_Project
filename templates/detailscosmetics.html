@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='Cosmetics1.jpg')}})
+        }
+    </style>
+    <title>Info</title>
+</head>
+<body><center>
+    <p><font size="5">
+    <h1>Cosmetics Details</h1>
+    <table border="1px">
+        <thead>
+            <td>Description</td><td>Price</td><td>Number of Ratings</td><td>Offer</td>
+        </thead>
+        {% for i in elist%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td><a href="https://www.nykaa.com/search/result/?q={{i[0]}}">Nykaa</a></td>
+        </tr>
+        {% endfor %}
+        <center><a href="/findcosmetics">Search Cosmetics</a></center>
+        <br>
+        <center><a href="/home">Home</a></center>
+    </table></center>
+</p> 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='mobile.jpg')}})
+        }
+    </style>
+    <title>Enter Information</title>
+</head>
+<body>
+    <p><font size="6">
+    <div align="center">
+    <h2> <em>Enter details to search mobiles</em></h2>
+
+    <form action="/details" method="post">
+        <table border="2">
+            <tr>
+                <td><em>Brand:</em></td><td><input type="text" name="brand" id="brand" placeholder="@apple"></td>
+            </tr>
+            <tr>
+                <td><em>Price min:</em></td><td><input type="number" name="pricemin" id="pricemin" placeholder="@10000" required></td>
+            </tr>
+            <tr>
+                <td><em>Price max:</em></td><td><input type="number" name="pricemax" id="pricemax" placeholder="@15000" required></td>
+            </tr>
+            <tr>
+                <td><em>Storage:</em></td><td><input type="text" name="storage" id="storage" placeholder="@64 GB"></td>
+            </tr>
+        </table>
+    
+<br>
+<br>
+</div align="center">
+<tr>
+    <td><div align="center"><input type="Reset" value="Reset"></div align="center"></td>
+</tr>
+<tr>
+    <td><div align="center"><input type="Submit" value="Search"></div align="center"></td>
+    <center><a href="/home">Home</a></center>
+</tr>
+</form>
+</p>    
+</body>
+</html>

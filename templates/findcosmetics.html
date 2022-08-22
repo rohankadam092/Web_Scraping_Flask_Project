@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='CosmeticsDetails.jpg')}})
+        }
+    </style>
+    <title>Enter Information</title>
+</head>
+<body>
+    <p><font size="6">
+    <div align="center">
+    <h2> <em>Enter details to search cosmetics</em></h2>
+    <form action="/detailscosmetics" method="post">
+        <table>
+            <tr>
+                <td><em>Product:</em></td><td><input type="text" name="product" id="product" placeholder="@Moisturizer"></td>
+            </tr>
+            <tr>
+                <td><em>Brand:</em></td><td><input type="text" name="brand" id="brand" placeholder="@Mac"></td>
+            </tr>
+            <tr>
+                <td><em>Price min:</em></td><td><input type="number" name="pricemin" id="pricemin" placeholder="@200" required></td>
+            </tr>
+            <tr>
+                <td><em>Price max:</em></td><td><input type="number" name="pricemax" id="pricemax" placeholder="@2000" required></td>
+            </tr>
+        </table>
+    
+<br>
+<br>
+</div align="center">
+
+<tr>
+    <td><div align="center"><input type="Reset" value="Reset"></div align="center"></td>
+</tr>
+<tr>
+    <td><div align="center"><input type="Submit" value="Search"></div align="center"></td>
+    <center><a href="/home">Home</a></center>
+</tr>
+</p>
+</form>    
+</body>
+</html>

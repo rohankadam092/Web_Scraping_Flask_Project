@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+        background-image:url({{url_for('static',filename='mobile.jpg')}})
+        }
+    </style>
+    <title>Info</title>
+</head>
+<body><center>
+    <p><font size="5">
+    <h1>Laptop Details</h1>
+    <table border="4px">
+        <thead> 
+            <td>Description</td><td>Processor</td><td>RAM</td><td>Operating System</td><td>Storage</td><td>Display</td><td>Price</td>
+        </thead>
+        {% for i in elist%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+            <td><a href="https://www.flipkart.com/search?q={{i[0]}}">FlipKart</a></td>
+        </tr>
+        {% endfor %}
+        <center><a href="/findlaptop">Search Laptop</a></center>
+        <br>
+        <center><a href="/home">Home</a></center>
+    </a>
+    </table></center>
+</p>
+</body>
+</html>
